@@ -573,7 +573,7 @@
       }
 
       if (remodal.settings.closeOnOutsideClick) {
-        remodal.close();
+        remodal.close('o-click-close');
       }
     });
   }
@@ -766,7 +766,7 @@
     // Handles the keydown event
     $(document).on('keydown.' + NAMESPACE, function(e) {
       if (current && current.settings.closeOnEscape && current.state === STATES.OPENED && e.keyCode === 27) {
-        current.close();
+        current.close('Esc-close');
       }
     });
 
